@@ -64,7 +64,6 @@ public class LoginPageFactory {
     
     public void clickValidate() throws InterruptedException {
         captchaButton.click();
-        //Thread.sleep(1000);
         driver.switchTo().alert().accept();
     }
     
@@ -128,7 +127,7 @@ public class LoginPageFactory {
     
     public void verifyAlert() {
     	driver.switchTo().alert().accept();
-        
+    	
     }
 
 }
