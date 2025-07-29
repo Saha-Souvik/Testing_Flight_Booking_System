@@ -24,6 +24,7 @@ public class LogoutTest {
         loginPage.clickValidate();
         loginPage.clickLogin();
         loginPage.verifyAlert();
+        Thread.sleep(3000);
     }
 
     @When("user is on the home page")

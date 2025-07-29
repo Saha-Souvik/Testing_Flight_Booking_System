@@ -1,27 +1,367 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="12" passed="5" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T11:46:58 IST" name="Default suite" finished-at="2025-07-25T11:47:20 IST" duration-ms="22476">
+  <suite started-at="2025-07-29T17:43:46 IST" name="Default suite" finished-at="2025-07-29T17:44:09 IST" duration-ms="22608">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-25T11:46:58 IST" name="Default test" finished-at="2025-07-25T11:47:20 IST" duration-ms="22476">
+    <test started-at="2025-07-29T17:43:46 IST" name="Default test" finished-at="2025-07-29T17:44:09 IST" duration-ms="22608">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:46:58 IST" name="setUpClass" finished-at="2025-07-25T11:46:59 IST" duration-ms="973" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:46 IST" name="setUpClass" finished-at="2025-07-29T17:43:47 IST" duration-ms="621" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1422ac7f]]>
+                <![CDATA[org.testng.TestRunner@5624657a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:46:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T11:47:08 IST" duration-ms="9386" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:52 IST" duration-ms="5101" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Booking Module Required Fields with valid data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Booking Module Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the Booking Module page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the Booking Module page")
+public void the_user_is_on_the_booking_module_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user enters all required fields with valid data")
+public void the_user_enters_all_required_fields_with_valid_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the Submit button")
+public void clicks_the_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the booking should be successful")
+public void the_booking_should_be_successful() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the Booking Module page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the Booking Module page")
+public void the_user_is_on_the_booking_module_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user enters all required fields with valid data")
+public void the_user_enters_all_required_fields_with_valid_data() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the Submit button")
+public void clicks_the_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the booking should be successful")
+public void the_booking_should_be_successful() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the Booking Module page(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/Booking_Module.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:52 IST" duration-ms="54" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Booking module with the Required Fields Blank"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Booking Module Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the Booking Module page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the Booking Module page")
+public void the_user_is_on_the_booking_module_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user leaves all required fields blank")
+public void the_user_leaves_all_required_fields_blank() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the Submit button")
+public void clicks_the_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("an error message should be displayed for required fields")
+public void an_error_message_should_be_displayed_for_required_fields() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the Booking Module page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the Booking Module page")
+public void the_user_is_on_the_booking_module_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user leaves all required fields blank")
+public void the_user_leaves_all_required_fields_blank() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the Submit button")
+public void clicks_the_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("an error message should be displayed for required fields")
+public void an_error_message_should_be_displayed_for_required_fields() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the Booking Module page(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/Booking_Module.feature:13)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:52 IST" duration-ms="59" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Booking Module Required Fields with Invalid Data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Booking Module Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the Booking Module page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the Booking Module page")
+public void the_user_is_on_the_booking_module_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user enters invalid data in required fields")
+public void the_user_enters_invalid_data_in_required_fields() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the Submit button")
+public void clicks_the_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("validation error messages should be displayed")
+public void validation_error_messages_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the Booking Module page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the Booking Module page")
+public void the_user_is_on_the_booking_module_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user enters invalid data in required fields")
+public void the_user_enters_invalid_data_in_required_fields() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the Submit button")
+public void clicks_the_submit_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("validation error messages should be displayed")
+public void validation_error_messages_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the Booking Module page(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/Booking_Module.feature:20)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:52 IST" duration-ms="74" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Booking Module Book Now Button works"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Booking Module Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user has filled in all valid booking details' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user has filled in all valid booking details")
+public void the_user_has_filled_in_all_valid_booking_details() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the Book Now button")
+public void the_user_clicks_the_book_now_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the booking should be confirmed")
+public void the_booking_should_be_confirmed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user has filled in all valid booking details' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user has filled in all valid booking details")
+public void the_user_has_filled_in_all_valid_booking_details() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the Book Now button")
+public void the_user_clicks_the_book_now_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the booking should be confirmed")
+public void the_booking_should_be_confirmed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user has filled in all valid booking details(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/Booking_Module.feature:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:52 IST" duration-ms="72" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Booking Module Reset Button Works"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Booking Module Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user has entered data in the booking form' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user has entered data in the booking form")
+public void the_user_has_entered_data_in_the_booking_form() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the Reset button")
+public void the_user_clicks_the_reset_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("all fields in the form should be cleared")
+public void all_fields_in_the_form_should_be_cleared() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user has entered data in the booking form' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user has entered data in the booking form")
+public void the_user_has_entered_data_in_the_booking_form() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the Reset button")
+public void the_user_clicks_the_reset_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("all fields in the form should be cleared")
+public void all_fields_in_the_form_should_be_cleared() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user has entered data in the booking form(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/Booking_Module.feature:33)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:54 IST" duration-ms="1676" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +377,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:47:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T11:47:10 IST" duration-ms="1441" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:55 IST" duration-ms="1306" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +393,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:47:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T11:47:11 IST" duration-ms="1435" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:57 IST" duration-ms="1255" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +409,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:47:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T11:47:13 IST" duration-ms="1419" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:43:58 IST" duration-ms="1259" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +425,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:47:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T11:47:19 IST" duration-ms="5936" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:43:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:44:04 IST" duration-ms="5624" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -104,16 +444,16 @@
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: Username does not match. Expected: flightadmin, Actual: 
-at pages.LoginPageFactory.verifyRememberedCredentials(LoginPageFactory.java:120)
+at pages.LoginPageFactory.verifyRememberedCredentials(LoginPageFactory.java:119)
 at stepDefinitions.LoginTest.verify_remembered_credentials(LoginTest.java:93)
-at ✽.credentials should be remembered on next visit(file:///D:/eclipse%20workspace/CTS_Sprint_2/src/test/java/features/login.feature:41)
+at ✽.credentials should be remembered on next visit(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/login.feature:41)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:47:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T11:47:19 IST" duration-ms="304" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:44:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:44:04 IST" duration-ms="323" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -132,16 +472,32 @@ at ✽.credentials should be remembered on next visit(file:///D:/eclipse%20works
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: Page not found (404 error detected)
-at pages.LoginPageFactory.verifyForgotPasswordRedirect(LoginPageFactory.java:126)
+at pages.LoginPageFactory.verifyForgotPasswordRedirect(LoginPageFactory.java:125)
 at stepDefinitions.LoginTest.verify_forgot_password_redirect(LoginTest.java:103)
-at ✽.it should redirect to the reset password page(file:///D:/eclipse%20workspace/CTS_Sprint_2/src/test/java/features/login.feature:45)
+at ✽.it should redirect to the reset password page(file:///C:/Users/User/git/repository/CTS_Sprint_2/src/test/java/features/login.feature:45)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@710f4dc7]" started-at="2025-07-25T11:47:19 IST" name="tearDownClass" finished-at="2025-07-25T11:47:20 IST" duration-ms="1506" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:44:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-29T17:44:08 IST" duration-ms="4319" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the logout button is mislabeled"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Logout Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@a9cd3b1]" started-at="2025-07-29T17:44:08 IST" name="tearDownClass" finished-at="2025-07-29T17:44:09 IST" duration-ms="813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
