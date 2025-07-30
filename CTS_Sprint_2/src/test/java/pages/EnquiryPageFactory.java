@@ -112,29 +112,6 @@ public class EnquiryPageFactory {
          boolean ans= messageBox.getAttribute("value").length() >= 500;     
          return ans;
     }
-    public void setUserloginame(String uname)
-    {
-    	driver.findElement(By.id("username")).sendKeys(uname);
-    }
-    public void setPassowrd(String pass)
-    {
-    	driver.findElement(By.id("password")).sendKeys(pass);
-    }
-    public void verifyAlert() {
-    	driver.switchTo().alert().accept();
-    	
-    }
-    public void setCaptcha() {
-        String value = driver.findElement(By.id("code")).getText();
-        captchaField.sendKeys(value);
-    }
-    public void clickValidate() throws InterruptedException {
-        captchaButton.click();
-        driver.switchTo().alert().accept();
-    }
-    public void clickLogin() throws InterruptedException {
-        loginButton.click();
-        Thread.sleep(1000);
-    }
+
 }
 

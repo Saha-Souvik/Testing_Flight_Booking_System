@@ -6,24 +6,25 @@ import org.testng.Assert;
 
 import io.cucumber.java.en.*;
 import pages.EnquiryPageFactory;
+import pages.LoginPageFactory;
 import hook.ApplicationHooks;
 
 public class EnquirySteps {
 
     WebDriver driver = ApplicationHooks.driver;
-    EnquiryPageFactory enquiry = new EnquiryPageFactory(driver);
+    LoginPageFactory loginPage = new LoginPageFactory(driver);
+    EnquiryPageFactory enquiry;
 
     @Given("The enquiry form page is loaded with {string} and {string}")
     public void the_enquiry_form_page_is_loaded_with_and(String username, String password) throws InterruptedException {
-        enquiry.setUserloginame(username);
-        enquiry.setPassowrd(password);
-        enquiry.setCaptcha();
-        enquiry.clickValidate();
-        enquiry.clickLogin();
-        enquiry.verifyAlert();
-//        Thread.sleep(4000);
-       driver.findElement(By.id("enquiryLink")).click();
-//       Thread.sleep(4000);
+    	loginPage.setUsername(username);
+        loginPage.setPassword(password);
+        loginPage.setCaptcha();
+        loginPage.clickValidate();
+        loginPage.clickLogin();
+        loginPage.verifyAlert();
+        driver.findElement(By.id("enquiryLink")).click();
+        enquiry= new EnquiryPageFactory(driver);
     }
 
     @When("The user enters full name {string}")
@@ -42,8 +43,9 @@ public class EnquirySteps {
     }
 
     @When("The user submits the enquiry form")
-    public void the_user_submits_the_enquiry_form() {
+    public void the_user_submits_the_enquiry_form() throws InterruptedException {
         enquiry.clickSubmit();
+        Thread.sleep(2000);   
     }
 
     @Then("An error should appear for invalid email format")
