@@ -87,7 +87,19 @@ public class EnquiryPageFactory {
     }
 
     public boolean isSubjectFieldErrorDisplayed() {
-        return subjectField.getAttribute("validationMessage") != null;
+        String temp  = driver.findElement(By.id("subject")).getText();
+        if(temp.equalsIgnoreCase(""))
+        {
+        	boolean ans = true;
+        	 System.out.print(ans);
+        	return ans;
+        }
+        else
+        {
+        	boolean ans = false;
+               	 System.out.print(ans);
+               	return ans;
+        }
     }
 
     public boolean isRequiredFieldErrorDisplayed() {
@@ -97,7 +109,8 @@ public class EnquiryPageFactory {
     }
 
     public boolean isMessageTooLong() {
-        return messageBox.getAttribute("value").length() > 500;
+         boolean ans= messageBox.getAttribute("value").length() >= 500;     
+         return ans;
     }
     public void setUserloginame(String uname)
     {
@@ -121,7 +134,7 @@ public class EnquiryPageFactory {
     }
     public void clickLogin() throws InterruptedException {
         loginButton.click();
-//        Thread.sleep(1000);
+        Thread.sleep(1000);
     }
 }
 

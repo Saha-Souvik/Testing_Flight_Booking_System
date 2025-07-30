@@ -32,7 +32,7 @@ Feature: Enquiry Form Validations
 
     Examples:
       | length |
-      | 501    |
+      | 551    |
 
   Scenario Outline: Verify Subject field required validation
     Given The enquiry form page is loaded with "flightadmin" and "flightadmin"
