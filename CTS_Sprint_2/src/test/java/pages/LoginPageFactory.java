@@ -13,9 +13,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utils.ConfigFileReader;
+
 public class LoginPageFactory {
 
     WebDriver driver;
+    ConfigFileReader config= new ConfigFileReader();
 
     @FindBy(id = "username")
     WebElement usernameField;
@@ -113,7 +116,7 @@ public class LoginPageFactory {
     }
     
     public void verifyRememberedCredentials(String expectedUser, String expectedPass) {
-    	driver.navigate().refresh();
+    	driver.navigate().to(config.getBaseUrl());
     	String actualUser = usernameField.getAttribute("value");
     	String actualPass = passwordField.getAttribute("value");
     	assert actualUser.equals(expectedUser) : "Username does not match. Expected: " + expectedUser + ", Actual: " + actualUser;

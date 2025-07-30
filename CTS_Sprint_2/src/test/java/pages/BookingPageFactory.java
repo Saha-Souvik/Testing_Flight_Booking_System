@@ -1,6 +1,8 @@
 package pages;
 
 import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,78 +49,76 @@ public class BookingPageFactory {
     @FindBy(id = "reset-now")
     WebElement resetButton;
 
-    @FindBy(tagName = "bookingconfirm")
+    @FindBy(id = "bookingconfirm")
     WebElement confirmationMessage;
+    
+    @FindBy(id = "errfn")
+    WebElement errorMessageContainer;
+
 
     public BookingPageFactory(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void enterName(String name) {
-        nameField.clear();
-        nameField.sendKeys(name);
-    }
-
-    public void enterEmail(String email) {
-        emailField.clear();
-        emailField.sendKeys(email);
-    }
-
-    public void enterPhone(String phone) {
-        phoneField.clear();
-        phoneField.sendKeys(phone);
-    }
-
-    public void selectOrigin(String origin) {
-        originField.clear();
-        originField.sendKeys(origin);
-    }
-
-    public void selectDestination(String destination) {
-        destinationField.clear();
-        destinationField.sendKeys(destination);
-    }
-
-    public void enterDepartureDate(String date) {
-        departureDateField.clear();
+    public void setBookingDetails(String from, String to, String date, String cls, String name, String email, String phone, String passengerCount) throws InterruptedException {
+        
+        originField.sendKeys(from);
+        destinationField.sendKeys(to);
         departureDateField.sendKeys(date);
+        travelClassDropdown.sendKeys(cls);
+        nameField.sendKeys(name);
+        emailField.sendKeys(email);
+        scrollIntoView(phoneField);
+        Thread.sleep(1000);
+        phoneField.sendKeys(phone);
+        setPassengerCount(Integer.parseInt(passengerCount));
     }
 
-    public void selectTravelClass(String travelClass) {
-        new Select(travelClassDropdown).selectByVisibleText(travelClass);
-    }
-
-    public void setPassengerCount(int desiredCount) {
+    private void setPassengerCount(int targetCount) {
         int currentCount = Integer.parseInt(passengerCountField.getAttribute("value"));
-
-        while (currentCount < desiredCount) {
+        while (currentCount < targetCount) {
             addPassengerButton.click();
             currentCount++;
         }
-
-        while (currentCount > desiredCount) {
+        while (currentCount > targetCount) {
             subtractPassengerButton.click();
             currentCount--;
         }
     }
 
-    public void clickBookFlight() {
+    public void clickBookNow() throws InterruptedException {
         bookFlightButton.click();
+        Thread.sleep(2000);
     }
 
     public void clickReset() {
+    	//scrollIntoView(resetButton);
         resetButton.click();
     }
 
-    public void assertBookingSuccess() {
-        String actual = confirmationMessage.getText().trim();
-        assertTrue(actual.contains("Your flight Reservation has been Confirmed !"), "Expected booking confirmation message not found");
+    public String getSuccessMessage() {
+    	//scrollIntoView(confirmationMessage);
+        return confirmationMessage.getText();
     }
 
-    public void assertBookingShouldNotProceed() {
-        String actual = confirmationMessage.getText().trim();
-        String expected = "Travel From can't be blank"; // Adjust as per actual error message
-        assertTrue(actual.contains(expected), "Booking failed to validate input fields properly");
+    public boolean areFieldsCleared() {
+        return nameField.getAttribute("value").isEmpty() &&
+               emailField.getAttribute("value").isEmpty() &&
+               phoneField.getAttribute("value").isEmpty() &&
+               originField.getAttribute("value").isEmpty() &&
+               destinationField.getAttribute("value").isEmpty() &&
+               departureDateField.getAttribute("value").isEmpty() &&
+               passengerCountField.getAttribute("value").equals("0");
+    }
+    
+    public boolean isErrorDisplayed() {
+        return errorMessageContainer.isDisplayed() && !errorMessageContainer.getText().trim().isEmpty();
+    }
+
+    
+    public void scrollIntoView(WebElement element) {
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }
+
