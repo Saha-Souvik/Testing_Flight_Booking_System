@@ -1,4 +1,4 @@
-@Module1
+@Login
 Feature: Login Functionality
 
   Background:

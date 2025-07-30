@@ -1,4 +1,4 @@
-@Module5
+@Logout
 Feature: Logout Functionality
 
   # This scenario automates test case AG-T22.

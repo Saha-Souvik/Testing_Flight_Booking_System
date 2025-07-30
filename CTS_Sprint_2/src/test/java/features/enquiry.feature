@@ -1,4 +1,4 @@
-@Module4
+@Enquiry
 Feature: Enquiry Form Validations
 
   Scenario Outline: Verify the Full Name field accepts valid input

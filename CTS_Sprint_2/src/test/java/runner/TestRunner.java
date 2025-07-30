@@ -12,7 +12,7 @@ plugin = {
         "junit:target/cucumber-reports/CucumberTestReport.xml"
     },
 
-tags = "( @Module1 or @Module2 or @Module3 or @Module4 or @Module5) and (not @ignore)")
+tags = "(@Login or @Booking or @Search or @Enquiry or @Logout) and (not @ignore)")
 
 public class TestRunner extends AbstractTestNGCucumberTests {
     

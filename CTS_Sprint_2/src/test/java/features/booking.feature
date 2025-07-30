@@ -1,4 +1,4 @@
-@Module2
+@Booking
 Feature: Booking Module Functionality
 
   Background:
