@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import pages.LoginPageFactory;
 import utils.ConfigFileReader;
 
-public class LoginTest {
+public class LoginSteps {
 
     WebDriver driver = ApplicationHooks.driver;
     LoginPageFactory loginPage;

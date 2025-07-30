@@ -13,7 +13,7 @@ import pages.LoginPageFactory;
 import utils.ConfigFileReader;
 import hook.ApplicationHooks;
 
-public class BookingTest {
+public class BookingSteps {
 
     WebDriver driver = ApplicationHooks.driver;
     LoginPageFactory loginPage = new LoginPageFactory(driver);

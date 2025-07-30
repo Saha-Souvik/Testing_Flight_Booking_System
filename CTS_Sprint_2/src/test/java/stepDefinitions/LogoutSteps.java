@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import pages.LogoutPageFactory;
 import pages.LoginPageFactory;
 
-public class LogoutTest {
+public class LogoutSteps {
 
     WebDriver driver = ApplicationHooks.driver;
     LoginPageFactory loginPage = new LoginPageFactory(driver);
