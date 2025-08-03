@@ -2,7 +2,7 @@
 
 ## 🚀 How to Collaborate?
 
-Welcome to the FlightBooking-G1 test automation project! To ensure effective team collaboration, please follow these standardized steps:
+Welcome to the FlightBooking test automation project! To ensure effective team collaboration, please follow these standardized steps:
 
 ### 1. Clone the Repository
 
