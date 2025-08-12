@@ -16,9 +16,11 @@ public class DriverSetup {
     public static WebDriver getDriver() {
 
         if (driver == null) {
+        	
             String browser = filereader.getBrowser().toLowerCase();
 
             switch (browser) {
+            
                 case "firefox":
                     driver = new FirefoxDriver();
                     break;
