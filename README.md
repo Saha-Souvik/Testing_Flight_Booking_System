@@ -127,6 +127,3 @@ See `LICENSE` for details.
 For issues, suggestions, or support, please open an [issue](https://github.com/Saha-Souvik/Testing_Flight_Booking_System/issues).
 
 ---
-
-> _“Quality means doing it right when no one is looking.”_  
-> — Henry Ford
